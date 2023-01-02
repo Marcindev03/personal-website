@@ -1,4 +1,5 @@
 import type { Component } from "solid-js";
+import { createSignal } from "solid-js";
 import { BsMoonStarsFill } from "solid-icons/bs";
 import {
   AiFillTwitterCircle,
@@ -7,16 +8,23 @@ import {
 } from "solid-icons/ai";
 
 const App: Component = () => {
+  const [darkMode, setDarkMode] = createSignal(false);
+
   const paragraphStyle = "text-gray-800 py-1";
 
+  const handleDarkModeToogle = () => setDarkMode((prevMode) => !prevMode);
+
   return (
-    <main class="bg-white px-10">
+    <main class={`bg-white px-10 ${darkMode() ? "dark" : ""}`}>
       <section class=" min-h-screen">
         <nav class="py-10 mb-12 flex justify-between">
           <h1 class="text-xl">Developedbyed</h1>
           <ul class="flex items-center">
             <li>
-              <BsMoonStarsFill class="cursor-pointer text-2xl" />
+              <BsMoonStarsFill
+                onClick={handleDarkModeToogle}
+                class="cursor-pointer text-2xl"
+              />
             </li>
             <li>
               <a
