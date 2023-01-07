@@ -1,4 +1,4 @@
-import { SocialMedia } from "../../common";
+import { ContactButton, SocialMedia } from "../../common";
 
 export const Header = () => {
   return (
@@ -16,6 +16,7 @@ export const Header = () => {
         alias quos!
       </p>
       <SocialMedia />
+      <ContactButton />
     </header>
   );
 };

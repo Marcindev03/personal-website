@@ -1,5 +1,4 @@
 import type { Component } from "solid-js";
-import { createSignal } from "solid-js";
 
 import { Header } from "./modules/homepage";
 
@@ -64,6 +63,8 @@ const App: Component = () => {
           </div>
         </div>
       </section>
+
+      <section id="contact"></section>
     </main>
   );
 };
