@@ -1,60 +1,18 @@
 import type { Component } from "solid-js";
 import { createSignal } from "solid-js";
-import { BsMoonStarsFill } from "solid-icons/bs";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "solid-icons/ai";
+
+import { Header } from "./modules/homepage";
 
 const App: Component = () => {
-  const [darkMode, setDarkMode] = createSignal(false);
-
   const paragraphStyle = "text-gray-800 py-1";
 
-  const handleDarkModeToogle = () => setDarkMode((prevMode) => !prevMode);
-
   return (
-    <main class={`bg-white px-10 ${darkMode() ? "dark" : ""}`}>
-      <section class=" min-h-screen">
-        <nav class="py-10 mb-12 flex justify-between">
-          <h1 class="text-xl">Developedbyed</h1>
-          <ul class="flex items-center">
-            <li>
-              <BsMoonStarsFill
-                onClick={handleDarkModeToogle}
-                class="cursor-pointer text-2xl"
-              />
-            </li>
-            <li>
-              <a
-                class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                href="#"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="text-center p-10">
-          <h2 class="text-5xl py-2 text-teal-600 font-medium">Dimitri Marco</h2>
-          <h3 class="text-2xl py-2">Developer and designer</h3>
-          <p class="text-md py-5 leading-8 text-gray-800">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae eum
-            consectetur officia quaerat voluptatibus, vitae quidem! Voluptatem
-            atque odio quibusdam itaque inventore soluta mollitia eos, nesciunt
-            perspiciatis commodi amet blanditiis!
-          </p>
-        </div>
-        <div class="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <AiFillTwitterCircle />
-          <AiFillLinkedin />
-          <AiFillYoutube />
-        </div>
-        <div class="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
-          <img src="/dev-ed-wave.png" />
-        </div>
-      </section>
+    <main class={`bg-white px-10`}>
+      <Header />
+
+      <div class="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
+        <img src="/dev-ed-wave.png" />
+      </div>
 
       <section>
         <div>
