@@ -1,4 +1,4 @@
-import { Component } from "solid-js";
+import { Component, For } from "solid-js";
 
 type TechnologyCardProps = {
   label: string;
@@ -16,9 +16,7 @@ export const TechnologyCard: Component<TechnologyCardProps> = ({
       <img src="/design.png" alt="" />
       <h3 class="text-lg font-medium pt-8 pb-2">{label}</h3>
 
-      {content.map((item) => (
-        <p class={paragraphStyle}>{item}</p>
-      ))}
+      <For each={content}>{(item) => <p class={paragraphStyle}>{item}</p>}</For>
     </div>
   );
 };
