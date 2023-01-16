@@ -1,4 +1,5 @@
 import type { Component } from "solid-js";
+import { ContactForm } from "./modules/contact";
 
 import { Header, Technologies } from "./modules/homepage";
 import { PortfolioShowcase } from "./modules/portfolio";
@@ -12,7 +13,7 @@ const App: Component = () => {
 
       <PortfolioShowcase />
 
-      <section id="contact"></section>
+      <ContactForm />
     </main>
   );
 };

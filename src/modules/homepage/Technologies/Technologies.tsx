@@ -1,11 +1,12 @@
 import { For } from "solid-js";
+import { Heading } from "../../common";
 import { TECHNOLOGIES } from "../../data";
 import { TechnologyCard } from "./TechnologyCard";
 
 export const Technologies = () => {
   return (
     <section>
-      <h3 class="text-3xl py-1">Technologies</h3>
+      <Heading>Technologies</Heading>
 
       <For each={TECHNOLOGIES}>
         {({ label, content }) => (

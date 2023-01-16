@@ -1,8 +1,10 @@
+import { Heading } from "../../common";
+
 export const PortfolioShowcase = () => {
   return (
     <section>
       <div>
-        <h3 class="text-3xl py-1">Portfolio</h3>
+        <Heading>Portfolio</Heading>
         <p class="text-md py-2 leading-8 text-gray-800">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
           rem consectetur provident a repudiandae amet veniam ex alias
