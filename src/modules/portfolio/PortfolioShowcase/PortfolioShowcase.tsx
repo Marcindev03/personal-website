@@ -12,13 +12,13 @@ export const PortfolioShowcase = () => {
       </div>
       <div class="flex flex-col gap-10 py-10">
         <div>
-          <img src="/web1.png" alt="" class="rounded-lg" />
+          <img src="/web1.png" alt="" class="rounded-lg" loading="lazy" />
         </div>
         <div>
-          <img src="/web2.png" alt="" class="rounded-lg" />
+          <img src="/web2.png" alt="" class="rounded-lg" loading="lazy" />
         </div>
         <div>
-          <img src="/web3.png" alt="" class="rounded-lg" />
+          <img src="/web3.png" alt="" class="rounded-lg" loading="lazy" />
         </div>
       </div>
     </section>
